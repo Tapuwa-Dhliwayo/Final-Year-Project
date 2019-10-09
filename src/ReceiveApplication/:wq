@@ -161,7 +161,7 @@ bool checkStorage(){
 		return false;
 	}else{
 		int bfree =fiData.f_bfree;
-		if(bfree < 13880050){
+		if(bfree < 13884050){
 			std::cout<<bfree<<std::endl;	
 			return true;
 		}else{

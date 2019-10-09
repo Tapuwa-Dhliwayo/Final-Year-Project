@@ -1,5 +1,6 @@
 //Testing threading
-
+#include <sys/statvfs.h>
+#include <bits/stdc++.h>
 #include <iostream>
 #include <thread>
 #include <unistd.h>
@@ -31,14 +32,21 @@ void run(){
 
 int main(){
 
-	int id = 0;
-	while(1){
+	struct statvfs fiData;
+	std::string filename;
+	filename = "/home/pi/moos-ivp/mymoos/Logs";
+	int n = filename.length();
+	char file_array[n+1];
+	strcpy(file_array,filename.c_str());
 
-		id++;
-		std::thread thread = std::thread(print_me,id);
-		thread.detach();
-		usleep(5000);
-
+	if(statvfs(file_array,&fiData) < 0){
+		std::cout<<"Failed"<<std::endl;
+	}else{
+	
+		std::cout<<"Disk: "<<filename<<std::endl;
+		std::cout<<"Block size: "<<fiData.f_bsize<<std::endl;
+		std::cout<<"Total no blocks: "<<fiData.f_blocks<<std::endl;
+		std::cout<<"Free blocks: "<<fiData.f_bfree<<std::endl;
 	}
 	std::cout<<"\nDone\n";
 	return 0;

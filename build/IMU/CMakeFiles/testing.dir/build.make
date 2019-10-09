@@ -57,67 +57,41 @@ include IMU/CMakeFiles/testing.dir/progress.make
 # Include the compile flags for this target's objects.
 include IMU/CMakeFiles/testing.dir/flags.make
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.o: IMU/CMakeFiles/testing.dir/flags.make
-IMU/CMakeFiles/testing.dir/arduino.cpp.o: /home/pi/moos-ivp/mymoos/src/IMU/arduino.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object IMU/CMakeFiles/testing.dir/arduino.cpp.o"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/arduino.cpp.o -c /home/pi/moos-ivp/mymoos/src/IMU/arduino.cpp
+IMU/CMakeFiles/testing.dir/testing.cpp.o: IMU/CMakeFiles/testing.dir/flags.make
+IMU/CMakeFiles/testing.dir/testing.cpp.o: /home/pi/moos-ivp/mymoos/src/IMU/testing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object IMU/CMakeFiles/testing.dir/testing.cpp.o"
+	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/testing.cpp.o -c /home/pi/moos-ivp/mymoos/src/IMU/testing.cpp
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/arduino.cpp.i"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/moos-ivp/mymoos/src/IMU/arduino.cpp > CMakeFiles/testing.dir/arduino.cpp.i
+IMU/CMakeFiles/testing.dir/testing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/testing.cpp.i"
+	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/moos-ivp/mymoos/src/IMU/testing.cpp > CMakeFiles/testing.dir/testing.cpp.i
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/arduino.cpp.s"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/moos-ivp/mymoos/src/IMU/arduino.cpp -o CMakeFiles/testing.dir/arduino.cpp.s
+IMU/CMakeFiles/testing.dir/testing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/testing.cpp.s"
+	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/moos-ivp/mymoos/src/IMU/testing.cpp -o CMakeFiles/testing.dir/testing.cpp.s
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.o.requires:
+IMU/CMakeFiles/testing.dir/testing.cpp.o.requires:
 
-.PHONY : IMU/CMakeFiles/testing.dir/arduino.cpp.o.requires
+.PHONY : IMU/CMakeFiles/testing.dir/testing.cpp.o.requires
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.o.provides: IMU/CMakeFiles/testing.dir/arduino.cpp.o.requires
-	$(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.o.provides.build
-.PHONY : IMU/CMakeFiles/testing.dir/arduino.cpp.o.provides
+IMU/CMakeFiles/testing.dir/testing.cpp.o.provides: IMU/CMakeFiles/testing.dir/testing.cpp.o.requires
+	$(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.o.provides.build
+.PHONY : IMU/CMakeFiles/testing.dir/testing.cpp.o.provides
 
-IMU/CMakeFiles/testing.dir/arduino.cpp.o.provides.build: IMU/CMakeFiles/testing.dir/arduino.cpp.o
-
-
-IMU/CMakeFiles/testing.dir/rs232.c.o: IMU/CMakeFiles/testing.dir/flags.make
-IMU/CMakeFiles/testing.dir/rs232.c.o: /home/pi/moos-ivp/mymoos/src/IMU/rs232.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object IMU/CMakeFiles/testing.dir/rs232.c.o"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testing.dir/rs232.c.o   -c /home/pi/moos-ivp/mymoos/src/IMU/rs232.c
-
-IMU/CMakeFiles/testing.dir/rs232.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testing.dir/rs232.c.i"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/moos-ivp/mymoos/src/IMU/rs232.c > CMakeFiles/testing.dir/rs232.c.i
-
-IMU/CMakeFiles/testing.dir/rs232.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testing.dir/rs232.c.s"
-	cd /home/pi/moos-ivp/mymoos/build/IMU && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/moos-ivp/mymoos/src/IMU/rs232.c -o CMakeFiles/testing.dir/rs232.c.s
-
-IMU/CMakeFiles/testing.dir/rs232.c.o.requires:
-
-.PHONY : IMU/CMakeFiles/testing.dir/rs232.c.o.requires
-
-IMU/CMakeFiles/testing.dir/rs232.c.o.provides: IMU/CMakeFiles/testing.dir/rs232.c.o.requires
-	$(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.o.provides.build
-.PHONY : IMU/CMakeFiles/testing.dir/rs232.c.o.provides
-
-IMU/CMakeFiles/testing.dir/rs232.c.o.provides.build: IMU/CMakeFiles/testing.dir/rs232.c.o
+IMU/CMakeFiles/testing.dir/testing.cpp.o.provides.build: IMU/CMakeFiles/testing.dir/testing.cpp.o
 
 
 # Object files for target testing
 testing_OBJECTS = \
-"CMakeFiles/testing.dir/arduino.cpp.o" \
-"CMakeFiles/testing.dir/rs232.c.o"
+"CMakeFiles/testing.dir/testing.cpp.o"
 
 # External object files for target testing
 testing_EXTERNAL_OBJECTS =
 
-IMU/testing: IMU/CMakeFiles/testing.dir/arduino.cpp.o
-IMU/testing: IMU/CMakeFiles/testing.dir/rs232.c.o
+IMU/testing: IMU/CMakeFiles/testing.dir/testing.cpp.o
 IMU/testing: IMU/CMakeFiles/testing.dir/build.make
 IMU/testing: IMU/CMakeFiles/testing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable testing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testing"
 	cd /home/pi/moos-ivp/mymoos/build/IMU && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +99,7 @@ IMU/CMakeFiles/testing.dir/build: IMU/testing
 
 .PHONY : IMU/CMakeFiles/testing.dir/build
 
-IMU/CMakeFiles/testing.dir/requires: IMU/CMakeFiles/testing.dir/arduino.cpp.o.requires
-IMU/CMakeFiles/testing.dir/requires: IMU/CMakeFiles/testing.dir/rs232.c.o.requires
+IMU/CMakeFiles/testing.dir/requires: IMU/CMakeFiles/testing.dir/testing.cpp.o.requires
 
 .PHONY : IMU/CMakeFiles/testing.dir/requires
 

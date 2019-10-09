@@ -194,33 +194,6 @@ IMUSensor.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/IMUSensor.cpp.s
 .PHONY : IMUSensor.cpp.s
 
-arduino.o: arduino.cpp.o
-
-.PHONY : arduino.o
-
-# target to build an object file
-arduino.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.o
-.PHONY : arduino.cpp.o
-
-arduino.i: arduino.cpp.i
-
-.PHONY : arduino.i
-
-# target to preprocess a source file
-arduino.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.i
-.PHONY : arduino.cpp.i
-
-arduino.s: arduino.cpp.s
-
-.PHONY : arduino.s
-
-# target to generate assembly for a file
-arduino.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.s
-.PHONY : arduino.cpp.s
-
 clogger.o: clogger.cpp.o
 
 .PHONY : clogger.o
@@ -275,32 +248,32 @@ huff.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/huff.cpp.s
 .PHONY : huff.cpp.s
 
-rs232.o: rs232.c.o
+testing.o: testing.cpp.o
 
-.PHONY : rs232.o
+.PHONY : testing.o
 
 # target to build an object file
-rs232.c.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.o
-.PHONY : rs232.c.o
+testing.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.o
+.PHONY : testing.cpp.o
 
-rs232.i: rs232.c.i
+testing.i: testing.cpp.i
 
-.PHONY : rs232.i
+.PHONY : testing.i
 
 # target to preprocess a source file
-rs232.c.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.i
-.PHONY : rs232.c.i
+testing.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.i
+.PHONY : testing.cpp.i
 
-rs232.s: rs232.c.s
+testing.s: testing.cpp.s
 
-.PHONY : rs232.s
+.PHONY : testing.s
 
 # target to generate assembly for a file
-rs232.c.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.s
-.PHONY : rs232.c.s
+testing.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.s
+.PHONY : testing.cpp.s
 
 # Help Target
 help:
@@ -318,18 +291,15 @@ help:
 	@echo "... IMUSensor.o"
 	@echo "... IMUSensor.i"
 	@echo "... IMUSensor.s"
-	@echo "... arduino.o"
-	@echo "... arduino.i"
-	@echo "... arduino.s"
 	@echo "... clogger.o"
 	@echo "... clogger.i"
 	@echo "... clogger.s"
 	@echo "... huff.o"
 	@echo "... huff.i"
 	@echo "... huff.s"
-	@echo "... rs232.o"
-	@echo "... rs232.i"
-	@echo "... rs232.s"
+	@echo "... testing.o"
+	@echo "... testing.i"
+	@echo "... testing.s"
 .PHONY : help
 
 
