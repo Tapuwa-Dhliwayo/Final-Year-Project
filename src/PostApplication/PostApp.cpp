@@ -91,7 +91,7 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* data
 		char data[sizeof(extracted)];
 		memcpy(data, &extracted, sizeof(extracted));
 
-		Comms.Notify("IMU",data);
+		Comms.Notify("IMU",&data,sizeof(data));
 
 		/*Debugging
 		std::cout<<"Acc"<<std::endl;
