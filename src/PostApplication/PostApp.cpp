@@ -63,7 +63,7 @@ int main(int argc, char * argv[]){
 void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* dataA,sensorValue_t* processedA,rawData_t* dataG,sensorValue_t* processedG){
 
 	int time = ((float)1/variables[1])*1000;
-	std::cout<<time<<std::endl;
+	//std::cout<<time<<std::endl;
 	IMU_data extracted;
 
 	//Configure Comms
@@ -107,7 +107,7 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* data
 		std::cout<<extracted.gyro_z<<std::endl;
 		std::cout<<std::endl;//*/
 	
-		MOOSPause(1000);
+		MOOSPause(time);
 	
 	}
 
