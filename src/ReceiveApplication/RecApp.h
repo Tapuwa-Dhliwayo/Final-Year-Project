@@ -3,13 +3,21 @@
 //IMU struct with all the data
 struct IMU_data{
 
-	float acc_x;
-	float acc_y;
-	float acc_z;
+	float accP_x;
+	float accP_y;
+	float accP_z;
 
-	float gyro_x;
-	float gyro_y;
-	float gyro_z;
+	int16_t accR_x;
+	int16_t accR_y;
+	int16_t accR_z;
+
+	float gyroP_x;
+	float gyroP_y;
+	float gyroP_z;
+	
+	int16_t gyroR_x;
+	int16_t gyroR_y;
+	int16_t gyroR_z;
 };
 
 

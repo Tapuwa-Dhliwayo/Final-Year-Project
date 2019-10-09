@@ -80,13 +80,21 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* data
 		accel_function(variables[2],dataA,processedA);
 		gyro_function(variables[3],dataG,processedG);
 		
-		extracted.acc_x = processedA->x;
-		extracted.acc_y = processedA->y;
-		extracted.acc_z = processedA->z;
+		extracted.accR_x = dataA->x;
+		extracted.accR_y = dataA->y;
+		extracted.accR_z = dataA->z;
 
-		extracted.gyro_x = processedG->x;
-		extracted.gyro_y = processedG->y;
-		extracted.gyro_z = processedG->z;
+		extracted.accP_x = processedA->x;
+		extracted.accP_y = processedA->y;
+		extracted.accP_z = processedA->z;
+	
+		extracted.gyroR_x = dataG->x;
+		extracted.gyroR_y = dataG->y;
+		extracted.gyroR_z = dataG->z;
+
+		extracted.gyroP_x = processedG->x;
+		extracted.gyroP_y = processedG->y;
+		extracted.gyroP_z = processedG->z;
 
 		char data[sizeof(extracted)];
 		memcpy(data, &extracted, sizeof(extracted));

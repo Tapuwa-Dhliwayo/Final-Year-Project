@@ -69,6 +69,8 @@ MOOS/libMOOS/Utils/ThreadPrint.h
 /home/pi/moos-ivp/mymoos/src/ReceiveApplication/MOOS/libMOOS/Utils/ThreadPrint.h
 iostream
 -
+thread
+-
 ../IMU/clogger.h
 /home/pi/moos-ivp/mymoos/src/IMU/clogger.h
 RecApp.h

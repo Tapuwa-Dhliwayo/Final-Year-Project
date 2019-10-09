@@ -6,12 +6,17 @@
 #include "MOOS/libMOOS/Utils/ConsoleColours.h"
 #include "MOOS/libMOOS/Utils/ThreadPrint.h"
 #include <iostream>
+#include <thread>
 #include "../IMU/clogger.h"
 
 #include "RecApp.h"
 
 
 MOOS::ThreadPrint gPrinter(std::cout);
+
+//ID the timestamp of the 1st Post this will be start(time Zero)
+bool start = false;
+double timestampZero = 0.0;
 
 bool OnConnect(void * pParam){
 	CMOOSCommClient* pC =  reinterpret_cast<CMOOSCommClient*> (pParam);
@@ -33,20 +38,52 @@ bool OnMail(void *pParam){
 	return true;
 }
 
-bool funcX(CMOOSMsg & M, void * TheParameterYouSaidtoPassOnToCallback)
+bool IMU(CMOOSMsg & M, void * pParam)
 {
+	double timestamp;
+	if(start == false){
+		start = true;
+		timestampZero = M.GetTime();
+		timestamp = M.GetTime() - timestampZero;
+	}
+	else{
 
+		timestamp = M.GetTime() - timestampZero;
+	}
 	IMU_data received;
-	gPrinter.SimplyPrintTimeAndMessage("call back for IMU", MOOS::ThreadPrint::CYAN);
+	rawData_t dataA;
+	rawData_t dataG;
+	sensorValue_t valueA;
+	sensorValue_t valueG;
+
+	gPrinter.SimplyPrintTimeAndMessage("IMU Data", MOOS::ThreadPrint::CYAN);
 	
-	char data[M.GetBinaryDataSize()];
+	//Extract all the IMU data into IMU_data struct
+	char data[M.GetBinaryDataSize()];//This can be used to transmit raw datato the Aruino as a byte array
 	memcpy(data,M.GetBinaryData(),M.GetBinaryDataSize());
-	std::cout<<"Received"<<std::endl;
-	
 	memcpy(&received, data,  sizeof(received));
-	std::cout<<received.acc_x<<std::endl;
 	
-	//Debugging Lines	
+	//Reformat the IMU_data for logging Purposes
+	dataA.x = received.accR_x;
+	dataA.y = received.accR_y;
+	dataA.z = received.accR_z;
+	dataG.x = received.gyroR_x;
+	dataG.y = received.gyroR_y;
+	dataG.z = received.gyroR_z;
+
+	valueA.x = received.accP_x;
+	valueA.y = received.accP_y;
+	valueA.z = received.accP_z;
+	valueG.x = received.gyroP_x;
+	valueG.y = received.gyroP_y;
+	valueG.z = received.gyroP_z;
+
+	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/IMU/sample_"+std::to_string(timestamp);
+	std::cout<<filename<<std::endl;
+	/*Debugging Lines
+		
+	std::cout<<"Received at "<<timestamp<<std::endl;
+	std::cout<<"Received"<<std::endl;
 	std::cout<<"Acc"<<std::endl;
 
 	std::cout<<received.acc_x<<std::endl;
@@ -58,7 +95,7 @@ bool funcX(CMOOSMsg & M, void * TheParameterYouSaidtoPassOnToCallback)
 	std::cout<<received.gyro_x<<std::endl;
 	std::cout<<received.gyro_y<<std::endl;
 	std::cout<<received.gyro_z<<std::endl;
-	std::cout<<std::endl;//	
+	std::cout<<std::endl;*/	
 
 	return true;
 }
@@ -86,18 +123,14 @@ int main(int argc, char * argv[]){
 	//first parameter is the channel nick-name, then the function
 	//to call, then a parameter we want passed when callback is
 	//invoked
-	Comms.AddMessageCallBack("callback_X","IMU",funcX,NULL);
+	Comms.AddMessageCallBack("callback_IMU","IMU",IMU,NULL);
 
 	//start the comms running
 	Comms.Run(db_host,db_port,my_name);
 
-	//for ever loop waiting to receive data
-
 	for(;;){
 
-		MOOSPause(5000);
-
-		//Comms.Notify("IMU",&data,sizeof(data));
+	//for ever loop waiting to receive data
 
 	}
 	return 0;
