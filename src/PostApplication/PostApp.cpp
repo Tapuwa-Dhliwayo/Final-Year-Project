@@ -61,6 +61,7 @@ int main(int argc, char * argv[]){
 void sampleIMU(std::vector<std::string>* db_names,int* variables){
 
 	int time = ((float)1/variables[1])*1000;
+	std::cout<<"Time IMU:"<<time<<std::endl;
 	//std::cout<<time<<std::endl;
 	IMU_data extracted;
 
@@ -124,7 +125,7 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables){
 void simGPS(std::vector<std::string>* db_names,int freq,int port){
 
 	int time = ((float)1/freq)*1000;
-	
+	std::cout<<"Time GPS: "<<time<<std::endl;	
 	//Configure Comms
 	MOOS::MOOSAsyncCommClient Comms;
 
@@ -135,12 +136,12 @@ void simGPS(std::vector<std::string>* db_names,int freq,int port){
 
 	for(;;){
 		//Menizes Location
-		double lat = -33.958629;
-		double lon = 18.460086;
+		float lat = -33.958629;
+		float lon = 18.460086;
 		extracted.lat = lat;
 		extracted.lon = lon;
-		//Adding a small delay simulate processing
-		MOOSPause(10);
+		//Adding a delay simulate processing
+		MOOSPause(500);
 			
 		char data[sizeof(extracted)];
 		memcpy(data, &extracted, sizeof(extracted));

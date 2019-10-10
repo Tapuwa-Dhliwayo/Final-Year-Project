@@ -177,7 +177,8 @@ bool GPS(CMOOSMsg & M, void * pParam){
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/";
 	std::thread thread = std::thread(logGPSFunc,filename,&received,timestamp);
 	thread.detach();	
-
+	
+	return true;
 }
 
 void logGPSFunc(std::string loglocation, GPS_data* data,double time){
@@ -219,7 +220,7 @@ bool checkStorage(){
 void GPSLogger::clogger(std::string filename,GPS_data* data){
 	
 	std::ofstream logfile;
-	logfile.open(filename);
+	logfile.open(filename+".txt");
 	logfile<<"GPS Data"<<std::endl;
 	logfile<<"Lat: "<<data->lat<<std::endl;
 	logfile<<"Long: "<<data->lon<<std::endl;
