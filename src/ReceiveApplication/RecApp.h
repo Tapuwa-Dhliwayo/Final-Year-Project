@@ -27,10 +27,27 @@ struct IMU_data{
 	int16_t gyroR_y;
 	int16_t gyroR_z;
 };
+//GPS struct with all the data
+struct GPS_data{
+
+	double lat;
+	double lon;
+
+};
+
+class GPSLogger
+{
+public:
+	void clogger(std::string filename,GPS_data* data);
+
+};
+
 
 //Function Declarations
-void logIMUFunc(std::string loglocation, IMU_data* data, double time);
 bool IMU(CMOOSMsg &M, void* pParam);
+void logIMUFunc(std::string loglocation, IMU_data* data, double time);
+bool GPS(CMOOSMsg & M, void * pParam);
+void logGPSFunc(std::string loglocation, GPS_data* data,double time);
 bool checkStorage();
 
 

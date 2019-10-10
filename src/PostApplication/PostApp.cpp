@@ -50,6 +50,10 @@ int main(int argc, char * argv[]){
 	std::thread GPSthread = std::thread(simGPS,&db_names,freqGPS,db_port);
 	GPSthread.detach();
 
+	for(;;){
+		//Loop forever
+	}
+
 	gpioTerminate();
 	return 0;
 }
@@ -64,7 +68,7 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables){
 	MOOS::MOOSAsyncCommClient Comms;
 
 	//start the comms running
-	Comms.Run(db_names->at(0),variables[0],db_names->at(1));
+	Comms.Run(db_names->at(0),variables[0],db_names->at(1)+"-IMU");
 
 	rawData_t dataA;
 	rawData_t dataG;
@@ -125,7 +129,7 @@ void simGPS(std::vector<std::string>* db_names,int freq,int port){
 	MOOS::MOOSAsyncCommClient Comms;
 
 	//start the comms running
-	Comms.Run(db_names->at(0),port,db_names->at(1));
+	Comms.Run(db_names->at(0),port,db_names->at(1)+"-GPS");
 	
 	GPS_data extracted;
 

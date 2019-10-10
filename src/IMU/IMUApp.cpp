@@ -28,8 +28,8 @@ int main(){
 	gyro_function(gyro,&gyro_raw,&gyro_values);
 
 	gpioTerminate();
-
-	clogger("testing",&accel_raw,&accel_values);
+	Logger clog;
+	clog.clogger("testing",&accel_raw,&accel_values);
 	compress("testing");
 	
 	decoder("testing_compressed");

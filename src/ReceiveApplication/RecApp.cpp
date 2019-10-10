@@ -14,6 +14,7 @@ double timestampZero = 0.0;
 bool OnConnect(void * pParam){
 	CMOOSCommClient* pC =  reinterpret_cast<CMOOSCommClient*> (pParam);
 	pC->Register("IMU",0.0);
+	pC->Register("GPS",0.0);
 
 	return true;
 }
@@ -34,9 +35,6 @@ bool OnMail(void *pParam){
 int main(int argc, char * argv[]){
 	
 
-	if(checkStorage()){
-		exit(1);
-	}
 	//understand the command line
 	MOOS::CommandLineParser P(argc,argv);
 
@@ -59,7 +57,7 @@ int main(int argc, char * argv[]){
 	//to call, then a parameter we want passed when callback is
 	//invoked
 	Comms.AddMessageCallBack("callback_IMU","IMU",IMU,NULL);
-
+	Comms.AddMessageCallBack("callback_GPS","GPS",GPS,NULL);
 	//start the comms running
 	Comms.Run(db_host,db_port,my_name);
 	
@@ -71,40 +69,12 @@ int main(int argc, char * argv[]){
 	return 0;
 }
 
-void logIMUFunc(std::string loglocation, IMU_data* data,double time){
-
-	//Variabble format for clogger 
-	rawData_t dataA;
-	rawData_t dataG;
-	sensorValue_t valueA;
-	sensorValue_t valueG;
-	//Reformat the IMU_data for logging Purposes
-	dataA.x = data->accR_x;
-	dataA.y = data->accR_y;
-	dataA.z = data->accR_z;
-	dataG.x = data->gyroR_x;
-	dataG.y = data->gyroR_y;
-	dataG.z = data->gyroR_z;
-
-	valueA.x = data->accP_x;
-	valueA.y = data->accP_y;
-	valueA.z = data->accP_z;
-	valueG.x = data->gyroP_x;
-	valueG.y = data->gyroP_y;
-	valueG.z = data->gyroP_z;
-
-	std::string filename1 = loglocation+"Accel/sample_"+std::to_string(time);
-	std::string filename2 = loglocation+"Gyro/sample_"+std::to_string(time);
+bool IMU(CMOOSMsg & M, void * pParam){
 	
-	clogger(filename1,&dataA,&valueA);
-	clogger(filename2,&dataG,&valueG);
-	compress(filename1);
-	compress(filename2);
+	if(checkStorage()){
+		exit(1);
+	}
 
-}
-
-bool IMU(CMOOSMsg & M, void * pParam)
-{
 	double timestamp;
 	if(start == false){
 		start = true;
@@ -147,6 +117,77 @@ bool IMU(CMOOSMsg & M, void * pParam)
 	return true;
 }
 
+void logIMUFunc(std::string loglocation, IMU_data* data,double time){
+
+	//Variabble format for clogger 
+	rawData_t dataA;
+	rawData_t dataG;
+	sensorValue_t valueA;
+	sensorValue_t valueG;
+	//Reformat the IMU_data for logging Purposes
+	dataA.x = data->accR_x;
+	dataA.y = data->accR_y;
+	dataA.z = data->accR_z;
+	dataG.x = data->gyroR_x;
+	dataG.y = data->gyroR_y;
+	dataG.z = data->gyroR_z;
+
+	valueA.x = data->accP_x;
+	valueA.y = data->accP_y;
+	valueA.z = data->accP_z;
+	valueG.x = data->gyroP_x;
+	valueG.y = data->gyroP_y;
+	valueG.z = data->gyroP_z;
+
+	std::string filename1 = loglocation+"Accel/sample_"+std::to_string(time);
+	std::string filename2 = loglocation+"Gyro/sample_"+std::to_string(time);
+	
+	Logger logger;
+	logger.clogger(filename1,&dataA,&valueA);
+	logger.clogger(filename2,&dataG,&valueG);
+	compress(filename1);
+	compress(filename2);
+
+}
+
+bool GPS(CMOOSMsg & M, void * pParam){
+
+	if(checkStorage()){
+		exit(1);
+	}
+	double timestamp;
+	if(start == false){
+		start = true;
+		timestampZero = M.GetTime();
+		timestamp = M.GetTime() - timestampZero;
+	}
+	else{
+
+		timestamp = M.GetTime() - timestampZero;
+	}
+	GPS_data received;
+
+	gPrinter.SimplyPrintTimeAndMessage("GPS Data", MOOS::ThreadPrint::CYAN);
+	
+	//Extract all the IMU data into IMU_data struct
+	char data[M.GetBinaryDataSize()];//This can be used to transmit raw datato the Aruino as a byte array
+	memcpy(data,M.GetBinaryData(),M.GetBinaryDataSize());
+	memcpy(&received, data,  sizeof(received));
+
+	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/";
+	std::thread thread = std::thread(logGPSFunc,filename,&received,timestamp);
+	thread.detach();	
+
+}
+
+void logGPSFunc(std::string loglocation, GPS_data* data,double time){
+
+	std::string filename = loglocation+"GPS/sample_"+std::to_string(time);
+	GPSLogger logger;
+	logger.clogger(filename,data);
+	compress(filename);
+}
+
 bool checkStorage(){
 
 	struct statvfs fiData;
@@ -174,3 +215,17 @@ bool checkStorage(){
 	}
 
 }
+
+void GPSLogger::clogger(std::string filename,GPS_data* data){
+	
+	std::ofstream logfile;
+	logfile.open(filename);
+	logfile<<"GPS Data"<<std::endl;
+	logfile<<"Lat: "<<data->lat<<std::endl;
+	logfile<<"Long: "<<data->lon<<std::endl;
+	logfile.close();
+}
+
+
+
+
