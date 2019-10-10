@@ -31,10 +31,16 @@ struct IMU_data{
 	int16_t gyroR_y;
 	int16_t gyroR_z;
 };
+struct GPS_data{
+
+	double lat;
+	double lon;
+
+};
 
 
 //Function Declarations
 
-void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* dataA,sensorValue_t* processedA,rawData_t* dataG,sensorValue_t* processedG);
+void sampleIMU(std::vector<std::string>* db_names,int* variables);
 
-
+void simGPS(std::vector<std::string>* db_names,int freq,int port);

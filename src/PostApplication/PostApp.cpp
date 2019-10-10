@@ -2,7 +2,6 @@
  * A simple example showing how to use a comms client
  */
 
-#include <vector>
 #include "PostApp.h"
 
 MOOS::ThreadPrint gPrinter(std::cout);
@@ -10,8 +9,7 @@ MOOS::ThreadPrint gPrinter(std::cout);
 bool OnConnect(void * pParam){
 	CMOOSCommClient* pC =  reinterpret_cast<CMOOSCommClient*> (pParam);
 	pC->Register("IMU",0.0);
-	//pC->Register("Y",0.0);
-	//pC->Register("Z",0.0);
+	pC->Register("GPS",0.0);
 
 	return true;
 }
@@ -34,33 +32,29 @@ int main(int argc, char * argv[]){
 	//IMU variable initialisation
 	int acc = 2;
 	int gyro = 2000;
-	rawData_t accel_raw;
-	rawData_t gyro_raw;
+	int freqIMU = 50;
+	int freqGPS = 25;
 
-	sensorValue_t accel_values;
-	sensorValue_t gyro_values;
-	int freq = 50;
-
-	int variables[] = {db_port,freq,acc,gyro};
+	int variablesIMU[] = {db_port,freqIMU,acc,gyro};
 	std::vector<std::string> db_names{db_host,my_name};
 
 	gpioCfgSetInternals(1<<10);
 	gpioInitialise();
-	std::cout<<"Program started"<<std::endl;
-	sampleIMU(&db_names,(int*)&variables,&accel_raw,&accel_values,&gyro_raw,&gyro_values);
-	
-	/*
-	for(;;){
-		MOOSPause(10000);
-		Comms.Notify("Rows",rows); //for callback_X
-		
-	}*/
+	std::cout<<"PostApplication started"<<std::endl;
+
+	//IMU thread for sampling the device
+	std::thread IMUthread = std::thread(sampleIMU,&db_names,(int*)&variablesIMU);
+	IMUthread.detach();
+
+	//GPS thread to simulate the GPS's behaviour
+	std::thread GPSthread = std::thread(simGPS,&db_names,freqGPS,db_port);
+	GPSthread.detach();
 
 	gpioTerminate();
 	return 0;
 }
 
-void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* dataA,sensorValue_t* processedA,rawData_t* dataG,sensorValue_t* processedG){
+void sampleIMU(std::vector<std::string>* db_names,int* variables){
 
 	int time = ((float)1/variables[1])*1000;
 	//std::cout<<time<<std::endl;
@@ -69,36 +63,38 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* data
 	//Configure Comms
 	MOOS::MOOSAsyncCommClient Comms;
 
-	std::string host = db_names->at(0);
-	std::string name = db_names->at(1);
-
 	//start the comms running
-	Comms.Run(host,variables[0],name);
+	Comms.Run(db_names->at(0),variables[0],db_names->at(1));
 
+	rawData_t dataA;
+	rawData_t dataG;
+
+	sensorValue_t processedA;
+	sensorValue_t processedG;
 	for(;;){
 		
-		accel_function(variables[2],dataA,processedA);
-		gyro_function(variables[3],dataG,processedG);
+		accel_function(variables[2],&dataA,&processedA);
+		gyro_function(variables[3],&dataG,&processedG);
 		
-		extracted.accR_x = dataA->x;
-		extracted.accR_y = dataA->y;
-		extracted.accR_z = dataA->z;
+		extracted.accR_x = dataA.x;
+		extracted.accR_y = dataA.y;
+		extracted.accR_z = dataA.z;
 
-		extracted.accP_x = processedA->x;
-		extracted.accP_y = processedA->y;
-		extracted.accP_z = processedA->z;
+		extracted.accP_x = processedA.x;
+		extracted.accP_y = processedA.y;
+		extracted.accP_z = processedA.z;
 	
-		extracted.gyroR_x = dataG->x;
-		extracted.gyroR_y = dataG->y;
-		extracted.gyroR_z = dataG->z;
+		extracted.gyroR_x = dataG.x;
+		extracted.gyroR_y = dataG.y;
+		extracted.gyroR_z = dataG.z;
 
-		extracted.gyroP_x = processedG->x;
-		extracted.gyroP_y = processedG->y;
-		extracted.gyroP_z = processedG->z;
+		extracted.gyroP_x = processedG.x;
+		extracted.gyroP_y = processedG.y;
+		extracted.gyroP_z = processedG.z;
 
 		char data[sizeof(extracted)];
 		memcpy(data, &extracted, sizeof(extracted));
-
+		//Transmit data as a binary Lump
 		Comms.Notify("IMU",&data,sizeof(data));
 
 		/*Debugging
@@ -120,3 +116,34 @@ void sampleIMU(std::vector<std::string>* db_names,int* variables,rawData_t* data
 	}
 
 }
+
+void simGPS(std::vector<std::string>* db_names,int freq,int port){
+
+	int time = ((float)1/freq)*1000;
+	
+	//Configure Comms
+	MOOS::MOOSAsyncCommClient Comms;
+
+	//start the comms running
+	Comms.Run(db_names->at(0),port,db_names->at(1));
+	
+	GPS_data extracted;
+
+	for(;;){
+		//Menizes Location
+		double lat = -33.958629;
+		double lon = 18.460086;
+		extracted.lat = lat;
+		extracted.lon = lon;
+		//Adding a small delay simulate processing
+		MOOSPause(10);
+			
+		char data[sizeof(extracted)];
+		memcpy(data, &extracted, sizeof(extracted));
+		//Transmit data as a Binary Lump
+		Comms.Notify("GPS",&data,sizeof(data));
+
+		MOOSPause(time);
+	}
+}
+
