@@ -171,6 +171,12 @@ FULLSYSTEM_BINARY_DIR:STATIC=/home/pi/moos-ivp/mymoos/build
 //Value Computed by CMake
 FULLSYSTEM_SOURCE_DIR:STATIC=/home/pi/moos-ivp/mymoos/src
 
+//Path to a file.
+LIBGPS_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+LIBGPS_LIBRARIES:FILEPATH=/usr/lib/arm-linux-gnueabihf/libgps.so
+
 //The directory containing a CMake configuration file for MOOS.
 MOOS_DIR:PATH=/usr/local/lib/cmake/MOOS
 
@@ -333,8 +339,14 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_MOOS:INTERNAL=[/usr/local/lib/cmake/MOOS/MOOSTargets.cmake][v(10)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding libgps
+FIND_PACKAGE_MESSAGE_DETAILS_libgps:INTERNAL=[/usr/include][/usr/lib/arm-linux-gnueabihf/libgps.so][v()]
 //Details about finding pigpio
 FIND_PACKAGE_MESSAGE_DETAILS_pigpio:INTERNAL=[/usr/include][/usr/lib/libpigpio.so][/usr/lib/libpigpiod_if.so][/usr/lib/libpigpiod_if2.so][v()]
+//ADVANCED property for variable: LIBGPS_INCLUDE_DIR
+LIBGPS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBGPS_LIBRARIES
+LIBGPS_LIBRARIES-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
 //Result of TRY_RUN
