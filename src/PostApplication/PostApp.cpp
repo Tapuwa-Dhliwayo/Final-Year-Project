@@ -32,8 +32,8 @@ int main(int argc, char * argv[]){
 	//IMU variable initialisation
 	int acc = 2;
 	int gyro = 2000;
-	int freqIMU = 50;
-	int freqGPS = 25;
+	int freqIMU = 100;
+	int freqGPS = 50;
 
 	int variablesIMU[] = {db_port,freqIMU,acc,gyro};
 	std::vector<std::string> db_names{db_host,my_name};

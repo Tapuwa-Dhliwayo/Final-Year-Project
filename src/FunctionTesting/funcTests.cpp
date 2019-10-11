@@ -25,8 +25,8 @@ int main(){
 		//Success - is a new file that matches the control after decompression
 		std::string filename ="/home/pi/TestingSensors/src/FunctionTesting/Func_test_folder/test"+std::to_string(i);
 		std::cout<<filename<<std::endl;
-
-		clogger(filename,&test_r,&test_s);
+		Logger logger;
+		logger.clogger(filename,&test_r,&test_s);
 		compress(filename);
 		decoder(filename);
 

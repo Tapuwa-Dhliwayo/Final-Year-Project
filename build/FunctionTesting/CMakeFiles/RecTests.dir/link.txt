@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/RecTests.dir/testRecApp.cpp.o CMakeFiles/RecTests.dir/__/IMU/IMUSensor.cpp.o CMakeFiles/RecTests.dir/__/IMU/huff.cpp.o CMakeFiles/RecTests.dir/__/IMU/clogger.cpp.o  -o RecTests -rdynamic /usr/local/lib/libMOOS.a -lpigpio -pthread -pthread -lm 

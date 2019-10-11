@@ -150,17 +150,17 @@ IMUApp/fast:
 .PHONY : IMUApp/fast
 
 #=============================================================================
-# Target rules for targets named funcTests
+# Target rules for targets named RecTests
 
 # Build rule for target.
-funcTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 funcTests
-.PHONY : funcTests
+RecTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RecTests
+.PHONY : RecTests
 
 # fast build rule for target.
-funcTests/fast:
-	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
-.PHONY : funcTests/fast
+RecTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/build
+.PHONY : RecTests/fast
 
 #=============================================================================
 # Target rules for targets named unitTests
@@ -174,6 +174,19 @@ unitTests: cmake_check_build_system
 unitTests/fast:
 	$(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/build
 .PHONY : unitTests/fast
+
+#=============================================================================
+# Target rules for targets named funcTests
+
+# Build rule for target.
+funcTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 funcTests
+.PHONY : funcTests
+
+# fast build rule for target.
+funcTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
+.PHONY : funcTests/fast
 
 #=============================================================================
 # Target rules for targets named PostApp
@@ -225,8 +238,9 @@ help:
 	@echo "... gpsApp"
 	@echo "... testing"
 	@echo "... IMUApp"
-	@echo "... funcTests"
+	@echo "... RecTests"
 	@echo "... unitTests"
+	@echo "... funcTests"
 	@echo "... PostApp"
 	@echo "... RecApp"
 	@echo "... ard_test"

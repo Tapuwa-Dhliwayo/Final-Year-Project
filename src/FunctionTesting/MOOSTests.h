@@ -12,4 +12,11 @@ struct IMU_data{
 	float gyro_z;
 };
 
+struct GPS_data{
+
+	float lat;
+	float lon;
+
+};
+
 

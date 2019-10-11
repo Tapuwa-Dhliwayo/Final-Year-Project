@@ -72,6 +72,7 @@ int main(int argc, char * argv[]){
 bool IMU(CMOOSMsg & M, void * pParam){
 	
 	if(checkStorage()){
+		std::cout<<"IMU caused termination"<<std::endl;
 		exit(1);
 	}
 
@@ -96,7 +97,7 @@ bool IMU(CMOOSMsg & M, void * pParam){
 
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/IMU/";
 	std::thread thread = std::thread(logIMUFunc,filename,&received,timestamp);
-	thread.detach();	
+	thread.join();	
 	/*Debugging Lines
 		
 	std::cout<<"Received at "<<timestamp<<std::endl;
@@ -153,6 +154,7 @@ void logIMUFunc(std::string loglocation, IMU_data* data,double time){
 bool GPS(CMOOSMsg & M, void * pParam){
 
 	if(checkStorage()){
+		std::cout<<"GPS caused termination"<<std::endl;
 		exit(1);
 	}
 	double timestamp;
@@ -176,7 +178,7 @@ bool GPS(CMOOSMsg & M, void * pParam){
 
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/";
 	std::thread thread = std::thread(logGPSFunc,filename,&received,timestamp);
-	thread.detach();	
+	thread.join();	
 	
 	return true;
 }
@@ -203,7 +205,7 @@ bool checkStorage(){
 		return false;
 	}else{
 		int bfree =fiData.f_bfree;
-		if(bfree < 13880050){
+		if(bfree < 1000){
 			std::cout<<bfree<<std::endl;	
 			return true;
 		}else{
