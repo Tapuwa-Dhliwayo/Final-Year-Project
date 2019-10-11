@@ -111,19 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-FunctionTesting/CMakeFiles/RecTests.dir/rule:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/RecTests.dir/rule
-.PHONY : FunctionTesting/CMakeFiles/RecTests.dir/rule
+FunctionTesting/CMakeFiles/MOOSTests.dir/rule:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/MOOSTests.dir/rule
+.PHONY : FunctionTesting/CMakeFiles/MOOSTests.dir/rule
 
 # Convenience name for target.
-RecTests: FunctionTesting/CMakeFiles/RecTests.dir/rule
+MOOSTests: FunctionTesting/CMakeFiles/MOOSTests.dir/rule
 
-.PHONY : RecTests
+.PHONY : MOOSTests
 
 # fast build rule for target.
-RecTests/fast:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/build
-.PHONY : RecTests/fast
+MOOSTests/fast:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/build
+.PHONY : MOOSTests/fast
 
 # Convenience name for target.
 FunctionTesting/CMakeFiles/unitTests.dir/rule:
@@ -155,13 +155,40 @@ funcTests/fast:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
 .PHONY : funcTests/fast
 
+MOOSTests.o: MOOSTests.cpp.o
+
+.PHONY : MOOSTests.o
+
+# target to build an object file
+MOOSTests.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/MOOSTests.cpp.o
+.PHONY : MOOSTests.cpp.o
+
+MOOSTests.i: MOOSTests.cpp.i
+
+.PHONY : MOOSTests.i
+
+# target to preprocess a source file
+MOOSTests.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/MOOSTests.cpp.i
+.PHONY : MOOSTests.cpp.i
+
+MOOSTests.s: MOOSTests.cpp.s
+
+.PHONY : MOOSTests.s
+
+# target to generate assembly for a file
+MOOSTests.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/MOOSTests.cpp.s
+.PHONY : MOOSTests.cpp.s
+
 __/IMU/IMUSensor.o: __/IMU/IMUSensor.cpp.o
 
 .PHONY : __/IMU/IMUSensor.o
 
 # target to build an object file
 __/IMU/IMUSensor.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/IMUSensor.cpp.o
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.o
 .PHONY : __/IMU/IMUSensor.cpp.o
 
@@ -171,7 +198,7 @@ __/IMU/IMUSensor.i: __/IMU/IMUSensor.cpp.i
 
 # target to preprocess a source file
 __/IMU/IMUSensor.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/IMUSensor.cpp.i
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.i
 .PHONY : __/IMU/IMUSensor.cpp.i
 
@@ -181,7 +208,7 @@ __/IMU/IMUSensor.s: __/IMU/IMUSensor.cpp.s
 
 # target to generate assembly for a file
 __/IMU/IMUSensor.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/IMUSensor.cpp.s
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.s
 .PHONY : __/IMU/IMUSensor.cpp.s
 
@@ -191,7 +218,7 @@ __/IMU/clogger.o: __/IMU/clogger.cpp.o
 
 # target to build an object file
 __/IMU/clogger.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/clogger.cpp.o
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/clogger.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/clogger.cpp.o
 .PHONY : __/IMU/clogger.cpp.o
 
@@ -201,7 +228,7 @@ __/IMU/clogger.i: __/IMU/clogger.cpp.i
 
 # target to preprocess a source file
 __/IMU/clogger.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/clogger.cpp.i
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/clogger.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/clogger.cpp.i
 .PHONY : __/IMU/clogger.cpp.i
 
@@ -211,7 +238,7 @@ __/IMU/clogger.s: __/IMU/clogger.cpp.s
 
 # target to generate assembly for a file
 __/IMU/clogger.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/clogger.cpp.s
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/clogger.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/clogger.cpp.s
 .PHONY : __/IMU/clogger.cpp.s
 
@@ -221,7 +248,7 @@ __/IMU/huff.o: __/IMU/huff.cpp.o
 
 # target to build an object file
 __/IMU/huff.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/huff.cpp.o
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/huff.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.o
 .PHONY : __/IMU/huff.cpp.o
@@ -232,7 +259,7 @@ __/IMU/huff.i: __/IMU/huff.cpp.i
 
 # target to preprocess a source file
 __/IMU/huff.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/huff.cpp.i
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/huff.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.i
 .PHONY : __/IMU/huff.cpp.i
@@ -243,7 +270,7 @@ __/IMU/huff.s: __/IMU/huff.cpp.s
 
 # target to generate assembly for a file
 __/IMU/huff.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/__/IMU/huff.cpp.s
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/huff.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.s
 .PHONY : __/IMU/huff.cpp.s
@@ -274,33 +301,6 @@ funcTests.s: funcTests.cpp.s
 funcTests.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.s
 .PHONY : funcTests.cpp.s
-
-testRecApp.o: testRecApp.cpp.o
-
-.PHONY : testRecApp.o
-
-# target to build an object file
-testRecApp.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/testRecApp.cpp.o
-.PHONY : testRecApp.cpp.o
-
-testRecApp.i: testRecApp.cpp.i
-
-.PHONY : testRecApp.i
-
-# target to preprocess a source file
-testRecApp.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/testRecApp.cpp.i
-.PHONY : testRecApp.cpp.i
-
-testRecApp.s: testRecApp.cpp.s
-
-.PHONY : testRecApp.s
-
-# target to generate assembly for a file
-testRecApp.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/testRecApp.cpp.s
-.PHONY : testRecApp.cpp.s
 
 unitTests.o: unitTests.cpp.o
 
@@ -336,10 +336,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... RecTests"
+	@echo "... MOOSTests"
 	@echo "... unitTests"
 	@echo "... funcTests"
+	@echo "... edit_cache"
+	@echo "... MOOSTests.o"
+	@echo "... MOOSTests.i"
+	@echo "... MOOSTests.s"
 	@echo "... __/IMU/IMUSensor.o"
 	@echo "... __/IMU/IMUSensor.i"
 	@echo "... __/IMU/IMUSensor.s"
@@ -352,9 +355,6 @@ help:
 	@echo "... funcTests.o"
 	@echo "... funcTests.i"
 	@echo "... funcTests.s"
-	@echo "... testRecApp.o"
-	@echo "... testRecApp.i"
-	@echo "... testRecApp.s"
 	@echo "... unitTests.o"
 	@echo "... unitTests.i"
 	@echo "... unitTests.s"

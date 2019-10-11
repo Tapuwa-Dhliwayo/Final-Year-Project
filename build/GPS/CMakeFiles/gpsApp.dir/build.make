@@ -90,7 +90,6 @@ gpsApp_EXTERNAL_OBJECTS =
 
 GPS/gpsApp: GPS/CMakeFiles/gpsApp.dir/gpsApp.cpp.o
 GPS/gpsApp: GPS/CMakeFiles/gpsApp.dir/build.make
-GPS/gpsApp: /usr/lib/libpigpio.so
 GPS/gpsApp: GPS/CMakeFiles/gpsApp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gpsApp"
 	cd /home/pi/moos-ivp/mymoos/build/GPS && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gpsApp.dir/link.txt --verbose=$(VERBOSE)

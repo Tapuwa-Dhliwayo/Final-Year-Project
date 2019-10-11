@@ -150,17 +150,17 @@ IMUApp/fast:
 .PHONY : IMUApp/fast
 
 #=============================================================================
-# Target rules for targets named RecTests
+# Target rules for targets named MOOSTests
 
 # Build rule for target.
-RecTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RecTests
-.PHONY : RecTests
+MOOSTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MOOSTests
+.PHONY : MOOSTests
 
 # fast build rule for target.
-RecTests/fast:
-	$(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/build
-.PHONY : RecTests/fast
+MOOSTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/build
+.PHONY : MOOSTests/fast
 
 #=============================================================================
 # Target rules for targets named unitTests
@@ -238,7 +238,7 @@ help:
 	@echo "... gpsApp"
 	@echo "... testing"
 	@echo "... IMUApp"
-	@echo "... RecTests"
+	@echo "... MOOSTests"
 	@echo "... unitTests"
 	@echo "... funcTests"
 	@echo "... PostApp"

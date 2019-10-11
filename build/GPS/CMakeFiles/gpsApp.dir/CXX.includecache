@@ -11,10 +11,12 @@ stdio.h
 -
 unistd.h
 -
+stdlib.h
+-
 iostream
 -
-cstring
+math.h
 -
-pigpio.h
+gps.h
 -
 

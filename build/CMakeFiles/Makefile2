@@ -212,14 +212,14 @@ clean: IMU/CMakeFiles/IMUApp.dir/clean
 # Directory level rules for directory FunctionTesting
 
 # Convenience name for "all" pass in the directory.
-FunctionTesting/all: FunctionTesting/CMakeFiles/RecTests.dir/all
+FunctionTesting/all: FunctionTesting/CMakeFiles/MOOSTests.dir/all
 FunctionTesting/all: FunctionTesting/CMakeFiles/unitTests.dir/all
 FunctionTesting/all: FunctionTesting/CMakeFiles/funcTests.dir/all
 
 .PHONY : FunctionTesting/all
 
 # Convenience name for "clean" pass in the directory.
-FunctionTesting/clean: FunctionTesting/CMakeFiles/RecTests.dir/clean
+FunctionTesting/clean: FunctionTesting/CMakeFiles/MOOSTests.dir/clean
 FunctionTesting/clean: FunctionTesting/CMakeFiles/unitTests.dir/clean
 FunctionTesting/clean: FunctionTesting/CMakeFiles/funcTests.dir/clean
 
@@ -231,39 +231,39 @@ FunctionTesting/preinstall:
 .PHONY : FunctionTesting/preinstall
 
 #=============================================================================
-# Target rules for target FunctionTesting/CMakeFiles/RecTests.dir
+# Target rules for target FunctionTesting/CMakeFiles/MOOSTests.dir
 
 # All Build rule for target.
-FunctionTesting/CMakeFiles/RecTests.dir/all:
-	$(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/depend
-	$(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=16,17,18,19,20 "Built target RecTests"
-.PHONY : FunctionTesting/CMakeFiles/RecTests.dir/all
+FunctionTesting/CMakeFiles/MOOSTests.dir/all:
+	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/depend
+	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target MOOSTests"
+.PHONY : FunctionTesting/CMakeFiles/MOOSTests.dir/all
 
 # Include target in all.
-all: FunctionTesting/CMakeFiles/RecTests.dir/all
+all: FunctionTesting/CMakeFiles/MOOSTests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-FunctionTesting/CMakeFiles/RecTests.dir/rule: cmake_check_build_system
+FunctionTesting/CMakeFiles/MOOSTests.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/moos-ivp/mymoos/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/RecTests.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/MOOSTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/moos-ivp/mymoos/build/CMakeFiles 0
-.PHONY : FunctionTesting/CMakeFiles/RecTests.dir/rule
+.PHONY : FunctionTesting/CMakeFiles/MOOSTests.dir/rule
 
 # Convenience name for target.
-RecTests: FunctionTesting/CMakeFiles/RecTests.dir/rule
+MOOSTests: FunctionTesting/CMakeFiles/MOOSTests.dir/rule
 
-.PHONY : RecTests
-
-# clean rule for target.
-FunctionTesting/CMakeFiles/RecTests.dir/clean:
-	$(MAKE) -f FunctionTesting/CMakeFiles/RecTests.dir/build.make FunctionTesting/CMakeFiles/RecTests.dir/clean
-.PHONY : FunctionTesting/CMakeFiles/RecTests.dir/clean
+.PHONY : MOOSTests
 
 # clean rule for target.
-clean: FunctionTesting/CMakeFiles/RecTests.dir/clean
+FunctionTesting/CMakeFiles/MOOSTests.dir/clean:
+	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/clean
+.PHONY : FunctionTesting/CMakeFiles/MOOSTests.dir/clean
+
+# clean rule for target.
+clean: FunctionTesting/CMakeFiles/MOOSTests.dir/clean
 
 .PHONY : clean
 
@@ -366,7 +366,7 @@ PostApplication/preinstall:
 PostApplication/CMakeFiles/PostApp.dir/all:
 	$(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/depend
 	$(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target PostApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target PostApp"
 .PHONY : PostApplication/CMakeFiles/PostApp.dir/all
 
 # Include target in all.
@@ -421,7 +421,7 @@ ReceiveApplication/preinstall:
 ReceiveApplication/CMakeFiles/RecApp.dir/all:
 	$(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/depend
 	$(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target RecApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=16,17,18,19,20 "Built target RecApp"
 .PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/all
 
 # Include target in all.
