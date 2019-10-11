@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/GPSTest.dir/GPSTest.cpp.o  -o GPSTest -rdynamic -lm -lgps 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <errno.h>
 #include <unistd.h>
+#include <math.h>
 #include "clogger.h"
 #include <pigpio.h>
 
@@ -10,10 +11,10 @@ int main(){
 
 	int acc = 2;
 	int gyro = 2000;
-	rawData_t accel_raw;
-	rawData_t gyro_raw;
-	sensorValue_t accel_values;
-	sensorValue_t gyro_values;
+	rawData_t dataA;
+	rawData_t dataG;
+	sensorValue_t proA;
+	sensorValue_t proG;
 	/*
 	cout << "Enter Sensitivities:" << endl;
 	cout << "Accel(2,4,8) and Gyro(250,500,1000,2000)" << endl;
@@ -24,15 +25,23 @@ int main(){
 	gpioCfgSetInternals(1<<10);
 	gpioInitialise();
 
-	accel_function(acc,&accel_raw,&accel_values);
-	gyro_function(gyro,&gyro_raw,&gyro_values);
+	accel_function(acc,&dataA,&proA);
+	gyro_function(gyro,&dataG,&proG);
 
 	gpioTerminate();
-	Logger clog;
-	clog.clogger("testing",&accel_raw,&accel_values);
-	compress("testing");
 	
-	decoder("testing_compressed");
+	//Mathematical testing of readings
+	float Rx = proA.x;
+	float Ry = proA.y;
+	float Rz = proA.z;
+	double R = sqrt(pow(Rx,2)+pow(Ry,2)+pow(Rz,2));
+	double cosX = Rx/R;	
+	double cosY = Ry/R;
+	double cosZ = Rz/R;
+
+	double check = sqrt(pow(cosX,2)+pow(cosY,2)+pow(cosZ,2));
+	cout<<"Check Accel value(if 1 value is correct) is : "<<check<<endl;
+
 	/*
 	cout << "Accel Processed" << endl;
 	printf("X: %f \n",accel_values.x);

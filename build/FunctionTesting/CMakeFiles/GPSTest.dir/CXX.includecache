@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/moos-ivp/mymoos/src/GPS/gpsApp.cpp
+/home/pi/moos-ivp/mymoos/src/FunctionTesting/GPSTest.cpp
 stdio.h
 -
 unistd.h

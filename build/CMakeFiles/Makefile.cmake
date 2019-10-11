@@ -13,7 +13,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/moos-ivp/mymoos/src/ArduinoTest/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/FunctionTesting/CMakeLists.txt"
-  "/home/pi/moos-ivp/mymoos/src/GPS/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/IMU/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/PostApplication/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/ReceiveApplication/CMakeLists.txt"
@@ -55,7 +54,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "GPS/CMakeFiles/CMakeDirectoryInformation.cmake"
   "IMU/CMakeFiles/CMakeDirectoryInformation.cmake"
   "FunctionTesting/CMakeFiles/CMakeDirectoryInformation.cmake"
   "PostApplication/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -65,12 +63,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "GPS/CMakeFiles/gpsApp.dir/DependInfo.cmake"
   "IMU/CMakeFiles/testing.dir/DependInfo.cmake"
   "IMU/CMakeFiles/IMUApp.dir/DependInfo.cmake"
-  "FunctionTesting/CMakeFiles/MOOSTests.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/unitTests.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/funcTests.dir/DependInfo.cmake"
+  "FunctionTesting/CMakeFiles/MOOSTests.dir/DependInfo.cmake"
+  "FunctionTesting/CMakeFiles/GPSTest.dir/DependInfo.cmake"
   "PostApplication/CMakeFiles/PostApp.dir/DependInfo.cmake"
   "ReceiveApplication/CMakeFiles/RecApp.dir/DependInfo.cmake"
   "ArduinoTest/CMakeFiles/ard_test.dir/DependInfo.cmake"

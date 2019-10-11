@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named gpsApp
-
-# Build rule for target.
-gpsApp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gpsApp
-.PHONY : gpsApp
-
-# fast build rule for target.
-gpsApp/fast:
-	$(MAKE) -f GPS/CMakeFiles/gpsApp.dir/build.make GPS/CMakeFiles/gpsApp.dir/build
-.PHONY : gpsApp/fast
-
-#=============================================================================
 # Target rules for targets named testing
 
 # Build rule for target.
@@ -150,19 +137,6 @@ IMUApp/fast:
 .PHONY : IMUApp/fast
 
 #=============================================================================
-# Target rules for targets named MOOSTests
-
-# Build rule for target.
-MOOSTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MOOSTests
-.PHONY : MOOSTests
-
-# fast build rule for target.
-MOOSTests/fast:
-	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/build
-.PHONY : MOOSTests/fast
-
-#=============================================================================
 # Target rules for targets named unitTests
 
 # Build rule for target.
@@ -187,6 +161,32 @@ funcTests: cmake_check_build_system
 funcTests/fast:
 	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
 .PHONY : funcTests/fast
+
+#=============================================================================
+# Target rules for targets named MOOSTests
+
+# Build rule for target.
+MOOSTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MOOSTests
+.PHONY : MOOSTests
+
+# fast build rule for target.
+MOOSTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/build
+.PHONY : MOOSTests/fast
+
+#=============================================================================
+# Target rules for targets named GPSTest
+
+# Build rule for target.
+GPSTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GPSTest
+.PHONY : GPSTest
+
+# fast build rule for target.
+GPSTest/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/GPSTest.dir/build.make FunctionTesting/CMakeFiles/GPSTest.dir/build
+.PHONY : GPSTest/fast
 
 #=============================================================================
 # Target rules for targets named PostApp
@@ -235,12 +235,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... gpsApp"
 	@echo "... testing"
 	@echo "... IMUApp"
-	@echo "... MOOSTests"
 	@echo "... unitTests"
 	@echo "... funcTests"
+	@echo "... MOOSTests"
+	@echo "... GPSTest"
 	@echo "... PostApp"
 	@echo "... RecApp"
 	@echo "... ard_test"

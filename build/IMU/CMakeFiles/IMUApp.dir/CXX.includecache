@@ -13,6 +13,8 @@ errno.h
 -
 unistd.h
 -
+math.h
+-
 clogger.h
 /home/pi/moos-ivp/mymoos/src/IMU/clogger.h
 pigpio.h
