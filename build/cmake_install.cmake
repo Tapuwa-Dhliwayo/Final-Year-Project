@@ -34,7 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/moos-ivp/mymoos/build/IMU/cmake_install.cmake")
   include("/home/pi/moos-ivp/mymoos/build/FunctionTesting/cmake_install.cmake")
   include("/home/pi/moos-ivp/mymoos/build/PostApplication/cmake_install.cmake")
   include("/home/pi/moos-ivp/mymoos/build/ReceiveApplication/cmake_install.cmake")

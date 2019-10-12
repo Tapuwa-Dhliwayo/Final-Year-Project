@@ -1,10 +1,7 @@
 /home/pi/moos-ivp/mymoos/build/CMakeFiles/rebuild_cache.dir
 /home/pi/moos-ivp/mymoos/build/CMakeFiles/edit_cache.dir
-/home/pi/moos-ivp/mymoos/build/IMU/CMakeFiles/rebuild_cache.dir
-/home/pi/moos-ivp/mymoos/build/IMU/CMakeFiles/edit_cache.dir
-/home/pi/moos-ivp/mymoos/build/IMU/CMakeFiles/testing.dir
-/home/pi/moos-ivp/mymoos/build/IMU/CMakeFiles/IMUApp.dir
 /home/pi/moos-ivp/mymoos/build/FunctionTesting/CMakeFiles/edit_cache.dir
+/home/pi/moos-ivp/mymoos/build/FunctionTesting/CMakeFiles/IMUTest.dir
 /home/pi/moos-ivp/mymoos/build/FunctionTesting/CMakeFiles/unitTests.dir
 /home/pi/moos-ivp/mymoos/build/FunctionTesting/CMakeFiles/funcTests.dir
 /home/pi/moos-ivp/mymoos/build/FunctionTesting/CMakeFiles/rebuild_cache.dir

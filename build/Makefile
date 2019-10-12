@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testing
+# Target rules for targets named IMUTest
 
 # Build rule for target.
-testing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testing
-.PHONY : testing
+IMUTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 IMUTest
+.PHONY : IMUTest
 
 # fast build rule for target.
-testing/fast:
-	$(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/build
-.PHONY : testing/fast
-
-#=============================================================================
-# Target rules for targets named IMUApp
-
-# Build rule for target.
-IMUApp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 IMUApp
-.PHONY : IMUApp
-
-# fast build rule for target.
-IMUApp/fast:
-	$(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/build
-.PHONY : IMUApp/fast
+IMUTest/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/build
+.PHONY : IMUTest/fast
 
 #=============================================================================
 # Target rules for targets named unitTests
@@ -235,8 +222,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... testing"
-	@echo "... IMUApp"
+	@echo "... IMUTest"
 	@echo "... unitTests"
 	@echo "... funcTests"
 	@echo "... MOOSTests"

@@ -10,7 +10,6 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
-add_subdirectory(IMU)
 add_subdirectory(FunctionTesting)
 add_subdirectory(PostApplication)
 add_subdirectory(ReceiveApplication)

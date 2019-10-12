@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/moos-ivp/mymoos/src/FunctionTesting/IMUTest.cpp
+iostream
+-
+errno.h
+-
+unistd.h
+-
+math.h
+-
+../IMU/IMUSensor.h
+/home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.h
+pigpio.h
+-
+
+/home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.cpp
+IMUSensor.h
+/home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.h
+
+/home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.h
+stdint.h
+-
+pigpio.h
+-
+iostream
+-
+errno.h
+-
+unistd.h
+-
+

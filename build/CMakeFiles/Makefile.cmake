@@ -13,7 +13,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/moos-ivp/mymoos/src/ArduinoTest/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/FunctionTesting/CMakeLists.txt"
-  "/home/pi/moos-ivp/mymoos/src/IMU/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/PostApplication/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/ReceiveApplication/CMakeLists.txt"
   "/home/pi/moos-ivp/mymoos/src/cmake/Findpigpio.cmake"
@@ -54,7 +53,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "IMU/CMakeFiles/CMakeDirectoryInformation.cmake"
   "FunctionTesting/CMakeFiles/CMakeDirectoryInformation.cmake"
   "PostApplication/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ReceiveApplication/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -63,8 +61,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "IMU/CMakeFiles/testing.dir/DependInfo.cmake"
-  "IMU/CMakeFiles/IMUApp.dir/DependInfo.cmake"
+  "FunctionTesting/CMakeFiles/IMUTest.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/unitTests.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/funcTests.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/MOOSTests.dir/DependInfo.cmake"

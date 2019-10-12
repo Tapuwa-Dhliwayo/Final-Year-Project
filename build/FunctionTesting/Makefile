@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+FunctionTesting/CMakeFiles/IMUTest.dir/rule:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/IMUTest.dir/rule
+.PHONY : FunctionTesting/CMakeFiles/IMUTest.dir/rule
+
+# Convenience name for target.
+IMUTest: FunctionTesting/CMakeFiles/IMUTest.dir/rule
+
+.PHONY : IMUTest
+
+# fast build rule for target.
+IMUTest/fast:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/build
+.PHONY : IMUTest/fast
+
+# Convenience name for target.
 FunctionTesting/CMakeFiles/unitTests.dir/rule:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/unitTests.dir/rule
 .PHONY : FunctionTesting/CMakeFiles/unitTests.dir/rule
@@ -197,6 +212,33 @@ GPSTest.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/GPSTest.dir/build.make FunctionTesting/CMakeFiles/GPSTest.dir/GPSTest.cpp.s
 .PHONY : GPSTest.cpp.s
 
+IMUTest.o: IMUTest.cpp.o
+
+.PHONY : IMUTest.o
+
+# target to build an object file
+IMUTest.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/IMUTest.cpp.o
+.PHONY : IMUTest.cpp.o
+
+IMUTest.i: IMUTest.cpp.i
+
+.PHONY : IMUTest.i
+
+# target to preprocess a source file
+IMUTest.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/IMUTest.cpp.i
+.PHONY : IMUTest.cpp.i
+
+IMUTest.s: IMUTest.cpp.s
+
+.PHONY : IMUTest.s
+
+# target to generate assembly for a file
+IMUTest.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/IMUTest.cpp.s
+.PHONY : IMUTest.cpp.s
+
 MOOSTests.o: MOOSTests.cpp.o
 
 .PHONY : MOOSTests.o
@@ -230,6 +272,7 @@ __/IMU/IMUSensor.o: __/IMU/IMUSensor.cpp.o
 
 # target to build an object file
 __/IMU/IMUSensor.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/__/IMU/IMUSensor.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.o
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.o
 .PHONY : __/IMU/IMUSensor.cpp.o
@@ -240,6 +283,7 @@ __/IMU/IMUSensor.i: __/IMU/IMUSensor.cpp.i
 
 # target to preprocess a source file
 __/IMU/IMUSensor.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/__/IMU/IMUSensor.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.i
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.i
 .PHONY : __/IMU/IMUSensor.cpp.i
@@ -250,6 +294,7 @@ __/IMU/IMUSensor.s: __/IMU/IMUSensor.cpp.s
 
 # target to generate assembly for a file
 __/IMU/IMUSensor.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/IMUTest.dir/build.make FunctionTesting/CMakeFiles/IMUTest.dir/__/IMU/IMUSensor.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/IMUSensor.cpp.s
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/MOOSTests.dir/build.make FunctionTesting/CMakeFiles/MOOSTests.dir/__/IMU/IMUSensor.cpp.s
 .PHONY : __/IMU/IMUSensor.cpp.s
@@ -378,6 +423,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... IMUTest"
 	@echo "... unitTests"
 	@echo "... funcTests"
 	@echo "... rebuild_cache"
@@ -386,6 +432,9 @@ help:
 	@echo "... GPSTest.o"
 	@echo "... GPSTest.i"
 	@echo "... GPSTest.s"
+	@echo "... IMUTest.o"
+	@echo "... IMUTest.i"
+	@echo "... IMUTest.s"
 	@echo "... MOOSTests.o"
 	@echo "... MOOSTests.i"
 	@echo "... MOOSTests.s"
