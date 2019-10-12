@@ -15,11 +15,11 @@ int main(){
 	rawData_t dataG;
 	sensorValue_t proA;
 	sensorValue_t proG;
-	/*
-	cout << "Enter Sensitivities:" << endl;
+	
+	cout << "Enter Sensitivities: acc gyro" << endl;
 	cout << "Accel(2,4,8) and Gyro(250,500,1000,2000)" << endl;
 	cin >> acc >> gyro;
-	*/
+	
 	cout <<"Accel Sensitivity: " << acc << " Gyro Sensitivity: " << gyro << endl;
 	
 	gpioCfgSetInternals(1<<10);
@@ -40,7 +40,7 @@ int main(){
 	double cosZ = Rz/R;
 
 	double check = sqrt(pow(cosX,2)+pow(cosY,2)+pow(cosZ,2));
-	cout<<"Check Accel value(if 1 value is correct) is : "<<check<<endl;
+	cout<<"Check Accel value(if 1 value is correct) is : "<<R<<endl;
 
 	/*
 	cout << "Accel Processed" << endl;
