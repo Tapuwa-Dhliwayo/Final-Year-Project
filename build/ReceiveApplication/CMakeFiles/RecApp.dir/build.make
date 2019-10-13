@@ -153,12 +153,62 @@ ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o.provides: ReceiveA
 ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o.provides.build: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o
 
 
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o: ReceiveApplication/CMakeFiles/RecApp.dir/flags.make
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o: /home/pi/moos-ivp/mymoos/src/Arduino/ARD.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o -c /home/pi/moos-ivp/mymoos/src/Arduino/ARD.cpp
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.i"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/moos-ivp/mymoos/src/Arduino/ARD.cpp > CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.i
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.s"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/moos-ivp/mymoos/src/Arduino/ARD.cpp -o CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.s
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.requires:
+
+.PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.requires
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.provides: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.requires
+	$(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.provides.build
+.PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.provides
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.provides.build: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o
+
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o: ReceiveApplication/CMakeFiles/RecApp.dir/flags.make
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o: /home/pi/moos-ivp/mymoos/src/Arduino/rs232.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o   -c /home/pi/moos-ivp/mymoos/src/Arduino/rs232.c
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RecApp.dir/__/Arduino/rs232.c.i"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/moos-ivp/mymoos/src/Arduino/rs232.c > CMakeFiles/RecApp.dir/__/Arduino/rs232.c.i
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RecApp.dir/__/Arduino/rs232.c.s"
+	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/moos-ivp/mymoos/src/Arduino/rs232.c -o CMakeFiles/RecApp.dir/__/Arduino/rs232.c.s
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.requires:
+
+.PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.requires
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.provides: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.requires
+	$(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.provides.build
+.PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.provides
+
+ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.provides.build: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o
+
+
 # Object files for target RecApp
 RecApp_OBJECTS = \
 "CMakeFiles/RecApp.dir/RecApp.cpp.o" \
 "CMakeFiles/RecApp.dir/__/IMU/IMUSensor.cpp.o" \
 "CMakeFiles/RecApp.dir/__/IMU/huff.cpp.o" \
-"CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o"
+"CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o" \
+"CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o" \
+"CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o"
 
 # External object files for target RecApp
 RecApp_EXTERNAL_OBJECTS =
@@ -167,11 +217,13 @@ ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/RecApp.cpp.o
 ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/IMUSensor.cpp.o
 ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/huff.cpp.o
 ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o
+ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o
+ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o
 ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/build.make
 ReceiveApplication/RecApp: /usr/local/lib/libMOOS.a
 ReceiveApplication/RecApp: /usr/lib/libpigpio.so
 ReceiveApplication/RecApp: ReceiveApplication/CMakeFiles/RecApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable RecApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable RecApp"
 	cd /home/pi/moos-ivp/mymoos/build/ReceiveApplication && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RecApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +235,8 @@ ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles
 ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/IMUSensor.cpp.o.requires
 ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/huff.cpp.o.requires
 ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles/RecApp.dir/__/IMU/clogger.cpp.o.requires
+ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o.requires
+ReceiveApplication/CMakeFiles/RecApp.dir/requires: ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o.requires
 
 .PHONY : ReceiveApplication/CMakeFiles/RecApp.dir/requires
 

@@ -99,8 +99,14 @@ bool IMU(CMOOSMsg & M, void * pParam){
 	std::thread thread = std::thread(logIMUFunc,filename,&received,timestamp);
 	thread.join();	
 	*/
+	std::string message = "IMU";
+	if(ardsend(&message)){
+		std::cout<<"Success IMU"<<std::endl;
+	}else{
 	
-	
+		std::cout<<"Fail IMU"<<std::endl;
+	}
+
 	/*Debugging Lines
 		
 	std::cout<<"Received at "<<timestamp<<std::endl;
@@ -178,10 +184,17 @@ bool GPS(CMOOSMsg & M, void * pParam){
 	char data[M.GetBinaryDataSize()];//This can be used to transmit raw datato the Aruino as a byte array
 	memcpy(data,M.GetBinaryData(),M.GetBinaryDataSize());
 	memcpy(&received, data,  sizeof(received));
-
+	/*Disabled Logging and compression
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/";
 	std::thread thread = std::thread(logGPSFunc,filename,&received,timestamp);
-	thread.join();	
+	thread.join();*/	
+	std::string message = "GPS";
+	if(ardsend(&message)){
+		std::cout<<"Success GPS"<<std::endl;
+	}else{
+	
+		std::cout<<"Fail GPS"<<std::endl;
+	}
 	
 	return true;
 }

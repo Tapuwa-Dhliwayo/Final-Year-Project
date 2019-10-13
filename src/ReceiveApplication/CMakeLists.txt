@@ -15,7 +15,7 @@ find_package(pigpio REQUIRED)
 find_package(Threads)
 
 #what files are needed?
-SET(SRCS RecApp.cpp  ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../IMU/clogger.cpp )
+SET(SRCS RecApp.cpp  ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../IMU/clogger.cpp ../Arduino/ARD.cpp ../Arduino/rs232.c)
 
 include_directories(  ${MOOS_INCLUDE_DIRS} ${MOOS_DEPEND_INCLUDE_DIRS} ${pigpio_INCLUDE_DIRS} ) 
 add_executable(${EXECNAME} ${SRCS} )

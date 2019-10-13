@@ -8,6 +8,7 @@
 #include <thread>
 #include <sys/statvfs.h>
 #include "../IMU/clogger.h"
+#include "../Arduino/ARD.h"
 //IMU struct with all the data
 struct IMU_data{
 

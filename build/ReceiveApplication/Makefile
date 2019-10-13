@@ -152,6 +152,60 @@ RecApp.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/RecApp.cpp.s
 .PHONY : RecApp.cpp.s
 
+__/Arduino/ARD.o: __/Arduino/ARD.cpp.o
+
+.PHONY : __/Arduino/ARD.o
+
+# target to build an object file
+__/Arduino/ARD.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.o
+.PHONY : __/Arduino/ARD.cpp.o
+
+__/Arduino/ARD.i: __/Arduino/ARD.cpp.i
+
+.PHONY : __/Arduino/ARD.i
+
+# target to preprocess a source file
+__/Arduino/ARD.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.i
+.PHONY : __/Arduino/ARD.cpp.i
+
+__/Arduino/ARD.s: __/Arduino/ARD.cpp.s
+
+.PHONY : __/Arduino/ARD.s
+
+# target to generate assembly for a file
+__/Arduino/ARD.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/ARD.cpp.s
+.PHONY : __/Arduino/ARD.cpp.s
+
+__/Arduino/rs232.o: __/Arduino/rs232.c.o
+
+.PHONY : __/Arduino/rs232.o
+
+# target to build an object file
+__/Arduino/rs232.c.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.o
+.PHONY : __/Arduino/rs232.c.o
+
+__/Arduino/rs232.i: __/Arduino/rs232.c.i
+
+.PHONY : __/Arduino/rs232.i
+
+# target to preprocess a source file
+__/Arduino/rs232.c.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.i
+.PHONY : __/Arduino/rs232.c.i
+
+__/Arduino/rs232.s: __/Arduino/rs232.c.s
+
+.PHONY : __/Arduino/rs232.s
+
+# target to generate assembly for a file
+__/Arduino/rs232.c.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f ReceiveApplication/CMakeFiles/RecApp.dir/build.make ReceiveApplication/CMakeFiles/RecApp.dir/__/Arduino/rs232.c.s
+.PHONY : __/Arduino/rs232.c.s
+
 __/IMU/IMUSensor.o: __/IMU/IMUSensor.cpp.o
 
 .PHONY : __/IMU/IMUSensor.o
@@ -245,6 +299,12 @@ help:
 	@echo "... RecApp.o"
 	@echo "... RecApp.i"
 	@echo "... RecApp.s"
+	@echo "... __/Arduino/ARD.o"
+	@echo "... __/Arduino/ARD.i"
+	@echo "... __/Arduino/ARD.s"
+	@echo "... __/Arduino/rs232.o"
+	@echo "... __/Arduino/rs232.i"
+	@echo "... __/Arduino/rs232.s"
 	@echo "... __/IMU/IMUSensor.o"
 	@echo "... __/IMU/IMUSensor.i"
 	@echo "... __/IMU/IMUSensor.s"
