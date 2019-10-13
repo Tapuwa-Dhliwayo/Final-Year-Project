@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ArdTest
+
+# Build rule for target.
+ArdTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ArdTest
+.PHONY : ArdTest
+
+# fast build rule for target.
+ArdTest/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/build
+.PHONY : ArdTest/fast
+
+#=============================================================================
 # Target rules for targets named IMUTest
 
 # Build rule for target.
@@ -222,6 +235,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... ArdTest"
 	@echo "... IMUTest"
 	@echo "... unitTests"
 	@echo "... funcTests"

@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+FunctionTesting/CMakeFiles/ArdTest.dir/rule:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/ArdTest.dir/rule
+.PHONY : FunctionTesting/CMakeFiles/ArdTest.dir/rule
+
+# Convenience name for target.
+ArdTest: FunctionTesting/CMakeFiles/ArdTest.dir/rule
+
+.PHONY : ArdTest
+
+# fast build rule for target.
+ArdTest/fast:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/build
+.PHONY : ArdTest/fast
+
+# Convenience name for target.
 FunctionTesting/CMakeFiles/IMUTest.dir/rule:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/IMUTest.dir/rule
 .PHONY : FunctionTesting/CMakeFiles/IMUTest.dir/rule
@@ -184,6 +199,33 @@ GPSTest: FunctionTesting/CMakeFiles/GPSTest.dir/rule
 GPSTest/fast:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/GPSTest.dir/build.make FunctionTesting/CMakeFiles/GPSTest.dir/build
 .PHONY : GPSTest/fast
+
+ArdTest.o: ArdTest.cpp.o
+
+.PHONY : ArdTest.o
+
+# target to build an object file
+ArdTest.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/ArdTest.cpp.o
+.PHONY : ArdTest.cpp.o
+
+ArdTest.i: ArdTest.cpp.i
+
+.PHONY : ArdTest.i
+
+# target to preprocess a source file
+ArdTest.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/ArdTest.cpp.i
+.PHONY : ArdTest.cpp.i
+
+ArdTest.s: ArdTest.cpp.s
+
+.PHONY : ArdTest.s
+
+# target to generate assembly for a file
+ArdTest.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/ArdTest.cpp.s
+.PHONY : ArdTest.cpp.s
 
 GPSTest.o: GPSTest.cpp.o
 
@@ -389,6 +431,33 @@ funcTests.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.s
 .PHONY : funcTests.cpp.s
 
+rs232.o: rs232.c.o
+
+.PHONY : rs232.o
+
+# target to build an object file
+rs232.c.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/rs232.c.o
+.PHONY : rs232.c.o
+
+rs232.i: rs232.c.i
+
+.PHONY : rs232.i
+
+# target to preprocess a source file
+rs232.c.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/rs232.c.i
+.PHONY : rs232.c.i
+
+rs232.s: rs232.c.s
+
+.PHONY : rs232.s
+
+# target to generate assembly for a file
+rs232.c.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f FunctionTesting/CMakeFiles/ArdTest.dir/build.make FunctionTesting/CMakeFiles/ArdTest.dir/rs232.c.s
+.PHONY : rs232.c.s
+
 unitTests.o: unitTests.cpp.o
 
 .PHONY : unitTests.o
@@ -423,12 +492,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... ArdTest"
 	@echo "... IMUTest"
 	@echo "... unitTests"
 	@echo "... funcTests"
 	@echo "... rebuild_cache"
 	@echo "... MOOSTests"
 	@echo "... GPSTest"
+	@echo "... ArdTest.o"
+	@echo "... ArdTest.i"
+	@echo "... ArdTest.s"
 	@echo "... GPSTest.o"
 	@echo "... GPSTest.i"
 	@echo "... GPSTest.s"
@@ -450,6 +523,9 @@ help:
 	@echo "... funcTests.o"
 	@echo "... funcTests.i"
 	@echo "... funcTests.s"
+	@echo "... rs232.o"
+	@echo "... rs232.i"
+	@echo "... rs232.s"
 	@echo "... unitTests.o"
 	@echo "... unitTests.i"
 	@echo "... unitTests.s"

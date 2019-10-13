@@ -10,7 +10,8 @@
 #include <pigpio.h>
 #include <vector>
 
-#include "../IMU/clogger.h"
+#include "../IMU/IMUSensor.h"
+#include "../GPS/GPS.h"
 
 //IMU struct with all the data
 struct IMU_data{
