@@ -168,7 +168,7 @@ clean: FunctionTesting/CMakeFiles/IMUTest.dir/clean
 FunctionTesting/CMakeFiles/unitTests.dir/all:
 	$(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/depend
 	$(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=32,33,34 "Built target unitTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=29,30,31 "Built target unitTests"
 .PHONY : FunctionTesting/CMakeFiles/unitTests.dir/all
 
 # Include target in all.
@@ -205,7 +205,7 @@ clean: FunctionTesting/CMakeFiles/unitTests.dir/clean
 FunctionTesting/CMakeFiles/funcTests.dir/all:
 	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/depend
 	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=27,28,29,30,31 "Built target funcTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=24,25,26,27,28 "Built target funcTests"
 .PHONY : FunctionTesting/CMakeFiles/funcTests.dir/all
 
 # Include target in all.
@@ -416,61 +416,6 @@ ReceiveApplication/CMakeFiles/RecApp.dir/clean:
 
 # clean rule for target.
 clean: ReceiveApplication/CMakeFiles/RecApp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory ArduinoTest
-
-# Convenience name for "all" pass in the directory.
-ArduinoTest/all: ArduinoTest/CMakeFiles/ard_test.dir/all
-
-.PHONY : ArduinoTest/all
-
-# Convenience name for "clean" pass in the directory.
-ArduinoTest/clean: ArduinoTest/CMakeFiles/ard_test.dir/clean
-
-.PHONY : ArduinoTest/clean
-
-# Convenience name for "preinstall" pass in the directory.
-ArduinoTest/preinstall:
-
-.PHONY : ArduinoTest/preinstall
-
-#=============================================================================
-# Target rules for target ArduinoTest/CMakeFiles/ard_test.dir
-
-# All Build rule for target.
-ArduinoTest/CMakeFiles/ard_test.dir/all:
-	$(MAKE) -f ArduinoTest/CMakeFiles/ard_test.dir/build.make ArduinoTest/CMakeFiles/ard_test.dir/depend
-	$(MAKE) -f ArduinoTest/CMakeFiles/ard_test.dir/build.make ArduinoTest/CMakeFiles/ard_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=24,25,26 "Built target ard_test"
-.PHONY : ArduinoTest/CMakeFiles/ard_test.dir/all
-
-# Include target in all.
-all: ArduinoTest/CMakeFiles/ard_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-ArduinoTest/CMakeFiles/ard_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/moos-ivp/mymoos/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 ArduinoTest/CMakeFiles/ard_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/moos-ivp/mymoos/build/CMakeFiles 0
-.PHONY : ArduinoTest/CMakeFiles/ard_test.dir/rule
-
-# Convenience name for target.
-ard_test: ArduinoTest/CMakeFiles/ard_test.dir/rule
-
-.PHONY : ard_test
-
-# clean rule for target.
-ArduinoTest/CMakeFiles/ard_test.dir/clean:
-	$(MAKE) -f ArduinoTest/CMakeFiles/ard_test.dir/build.make ArduinoTest/CMakeFiles/ard_test.dir/clean
-.PHONY : ArduinoTest/CMakeFiles/ard_test.dir/clean
-
-# clean rule for target.
-clean: ArduinoTest/CMakeFiles/ard_test.dir/clean
 
 .PHONY : clean
 

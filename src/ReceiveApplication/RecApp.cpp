@@ -94,10 +94,13 @@ bool IMU(CMOOSMsg & M, void * pParam){
 	char data[M.GetBinaryDataSize()];//This can be used to transmit raw datato the Aruino as a byte array
 	memcpy(data,M.GetBinaryData(),M.GetBinaryDataSize());
 	memcpy(&received, data,  sizeof(received));
-
+	/*For operation test turn off logging
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/IMU/";
 	std::thread thread = std::thread(logIMUFunc,filename,&received,timestamp);
 	thread.join();	
+	*/
+	
+	
 	/*Debugging Lines
 		
 	std::cout<<"Received at "<<timestamp<<std::endl;

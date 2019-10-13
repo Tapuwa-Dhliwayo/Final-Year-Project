@@ -34,8 +34,8 @@ struct IMU_data{
 };
 struct GPS_data{
 
-	double lat;
-	double lon;
+	float lat;
+	float lon;
 
 };
 
@@ -43,5 +43,5 @@ struct GPS_data{
 //Function Declarations
 
 void sampleIMU(std::vector<std::string>* db_names,int* variables);
-
+void sampleGPS(std::vector<std::string>* db_names,int freq,int port);
 void simGPS(std::vector<std::string>* db_names,int freq,int port);

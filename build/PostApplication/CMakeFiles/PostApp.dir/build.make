@@ -129,28 +129,28 @@ PostApplication/CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o.provides: PostApplicati
 PostApplication/CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o.provides.build: PostApplication/CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o
 
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o: PostApplication/CMakeFiles/PostApp.dir/flags.make
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o: /home/pi/moos-ivp/mymoos/src/IMU/clogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o"
-	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o -c /home/pi/moos-ivp/mymoos/src/IMU/clogger.cpp
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o: PostApplication/CMakeFiles/PostApp.dir/flags.make
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o: /home/pi/moos-ivp/mymoos/src/GPS/GPS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/moos-ivp/mymoos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o"
+	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o -c /home/pi/moos-ivp/mymoos/src/GPS/GPS.cpp
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.i"
-	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/moos-ivp/mymoos/src/IMU/clogger.cpp > CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.i
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.i"
+	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/moos-ivp/mymoos/src/GPS/GPS.cpp > CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.i
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.s"
-	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/moos-ivp/mymoos/src/IMU/clogger.cpp -o CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.s
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.s"
+	cd /home/pi/moos-ivp/mymoos/build/PostApplication && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/moos-ivp/mymoos/src/GPS/GPS.cpp -o CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.s
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.requires:
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.requires:
 
-.PHONY : PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.requires
+.PHONY : PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.requires
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.provides: PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.requires
-	$(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.provides.build
-.PHONY : PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.provides
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.provides: PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.requires
+	$(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.provides.build
+.PHONY : PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.provides
 
-PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.provides.build: PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o
+PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.provides.build: PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o
 
 
 # Object files for target PostApp
@@ -158,7 +158,7 @@ PostApp_OBJECTS = \
 "CMakeFiles/PostApp.dir/PostApp.cpp.o" \
 "CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.o" \
 "CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o" \
-"CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o"
+"CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o"
 
 # External object files for target PostApp
 PostApp_EXTERNAL_OBJECTS =
@@ -166,7 +166,7 @@ PostApp_EXTERNAL_OBJECTS =
 PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/PostApp.cpp.o
 PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.o
 PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o
-PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o
+PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o
 PostApplication/PostApp: PostApplication/CMakeFiles/PostApp.dir/build.make
 PostApplication/PostApp: /usr/local/lib/libMOOS.a
 PostApplication/PostApp: /usr/lib/libpigpio.so
@@ -182,7 +182,7 @@ PostApplication/CMakeFiles/PostApp.dir/build: PostApplication/PostApp
 PostApplication/CMakeFiles/PostApp.dir/requires: PostApplication/CMakeFiles/PostApp.dir/PostApp.cpp.o.requires
 PostApplication/CMakeFiles/PostApp.dir/requires: PostApplication/CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.o.requires
 PostApplication/CMakeFiles/PostApp.dir/requires: PostApplication/CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o.requires
-PostApplication/CMakeFiles/PostApp.dir/requires: PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o.requires
+PostApplication/CMakeFiles/PostApp.dir/requires: PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o.requires
 
 .PHONY : PostApplication/CMakeFiles/PostApp.dir/requires
 

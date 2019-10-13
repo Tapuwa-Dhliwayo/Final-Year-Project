@@ -37,7 +37,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/pi/moos-ivp/mymoos/build/FunctionTesting/cmake_install.cmake")
   include("/home/pi/moos-ivp/mymoos/build/PostApplication/cmake_install.cmake")
   include("/home/pi/moos-ivp/mymoos/build/ReceiveApplication/cmake_install.cmake")
-  include("/home/pi/moos-ivp/mymoos/build/ArduinoTest/cmake_install.cmake")
 
 endif()
 

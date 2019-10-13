@@ -152,6 +152,33 @@ PostApp.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/PostApp.cpp.s
 .PHONY : PostApp.cpp.s
 
+__/GPS/GPS.o: __/GPS/GPS.cpp.o
+
+.PHONY : __/GPS/GPS.o
+
+# target to build an object file
+__/GPS/GPS.cpp.o:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o
+.PHONY : __/GPS/GPS.cpp.o
+
+__/GPS/GPS.i: __/GPS/GPS.cpp.i
+
+.PHONY : __/GPS/GPS.i
+
+# target to preprocess a source file
+__/GPS/GPS.cpp.i:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.i
+.PHONY : __/GPS/GPS.cpp.i
+
+__/GPS/GPS.s: __/GPS/GPS.cpp.s
+
+.PHONY : __/GPS/GPS.s
+
+# target to generate assembly for a file
+__/GPS/GPS.cpp.s:
+	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.s
+.PHONY : __/GPS/GPS.cpp.s
+
 __/IMU/IMUSensor.o: __/IMU/IMUSensor.cpp.o
 
 .PHONY : __/IMU/IMUSensor.o
@@ -178,33 +205,6 @@ __/IMU/IMUSensor.s: __/IMU/IMUSensor.cpp.s
 __/IMU/IMUSensor.cpp.s:
 	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.s
 .PHONY : __/IMU/IMUSensor.cpp.s
-
-__/IMU/clogger.o: __/IMU/clogger.cpp.o
-
-.PHONY : __/IMU/clogger.o
-
-# target to build an object file
-__/IMU/clogger.cpp.o:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o
-.PHONY : __/IMU/clogger.cpp.o
-
-__/IMU/clogger.i: __/IMU/clogger.cpp.i
-
-.PHONY : __/IMU/clogger.i
-
-# target to preprocess a source file
-__/IMU/clogger.cpp.i:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.i
-.PHONY : __/IMU/clogger.cpp.i
-
-__/IMU/clogger.s: __/IMU/clogger.cpp.s
-
-.PHONY : __/IMU/clogger.s
-
-# target to generate assembly for a file
-__/IMU/clogger.cpp.s:
-	cd /home/pi/moos-ivp/mymoos/build && $(MAKE) -f PostApplication/CMakeFiles/PostApp.dir/build.make PostApplication/CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.s
-.PHONY : __/IMU/clogger.cpp.s
 
 __/IMU/huff.o: __/IMU/huff.cpp.o
 
@@ -245,12 +245,12 @@ help:
 	@echo "... PostApp.o"
 	@echo "... PostApp.i"
 	@echo "... PostApp.s"
+	@echo "... __/GPS/GPS.o"
+	@echo "... __/GPS/GPS.i"
+	@echo "... __/GPS/GPS.s"
 	@echo "... __/IMU/IMUSensor.o"
 	@echo "... __/IMU/IMUSensor.i"
 	@echo "... __/IMU/IMUSensor.s"
-	@echo "... __/IMU/clogger.o"
-	@echo "... __/IMU/clogger.i"
-	@echo "... __/IMU/clogger.s"
 	@echo "... __/IMU/huff.o"
 	@echo "... __/IMU/huff.i"
 	@echo "... __/IMU/huff.s"

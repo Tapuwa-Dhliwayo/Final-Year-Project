@@ -15,9 +15,9 @@ find_package(pigpio REQUIRED)
 find_package(Threads)
 
 #what files are needed?
-SET(SRCS PostApp.cpp  ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../IMU/clogger.cpp )
+SET(SRCS PostApp.cpp  ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../GPS/GPS.cpp)
 
 include_directories( ${MOOS_INCLUDE_DIRS} ${MOOS_DEPEND_INCLUDE_DIRS} ${pigpio_INCLUDE_DIRS})
 add_executable(${EXECNAME} ${SRCS} )
-target_link_libraries(${EXECNAME} ${MOOS_LIBRARIES} ${MOOS_DEPEND_LIBRARIES} ${pigpio_LIBRARY} ${CMAKE_THREAD_LIBS_INIT})  
+target_link_libraries(${EXECNAME} ${MOOS_LIBRARIES} ${MOOS_DEPEND_LIBRARIES} ${pigpio_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} -lm -lgps)  
 

@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PostApp.dir/PostApp.cpp.o"
   "CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.o"
   "CMakeFiles/PostApp.dir/__/IMU/huff.cpp.o"
-  "CMakeFiles/PostApp.dir/__/IMU/clogger.cpp.o"
+  "CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o"
   "PostApp.pdb"
   "PostApp"
 )
