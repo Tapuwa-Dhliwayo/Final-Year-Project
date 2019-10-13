@@ -6,6 +6,7 @@
 #include "MOOS/libMOOS/Utils/ThreadPrint.h"
 #include <iostream>
 #include <thread>
+#include <mutex>
 #include <sys/statvfs.h>
 #include "../IMU/clogger.h"
 #include "../Arduino/ARD.h"

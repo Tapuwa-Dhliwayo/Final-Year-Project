@@ -20,8 +20,8 @@ int main(){
   	char mode[]={'8','N','1',0}; // 8 data bits, no parity, 1 stop bit
   	char str_send[2][BUF_SIZE]; // send data buffer
   	unsigned char str_recv[BUF_SIZE]; // recv data buffer
-  	strcpy(str_send[0], "What is the longest string i can send\n");
-  	strcpy(str_send[1], "longest string I can send\n");
+  	strcpy(str_send[0], "IMU\n");
+  	strcpy(str_send[1], "GPS\n");
   
   	if(RS232_OpenComport(cport_nr, bdrate, mode,0)) {
 

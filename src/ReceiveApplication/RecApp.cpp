@@ -4,7 +4,7 @@
 
 #include "RecApp.h"
 
-
+std::mutex mtx;
 MOOS::ThreadPrint gPrinter(std::cout);
 
 //ID the timestamp of the 1st Post this will be start(time Zero)
@@ -99,14 +99,15 @@ bool IMU(CMOOSMsg & M, void * pParam){
 	std::thread thread = std::thread(logIMUFunc,filename,&received,timestamp);
 	thread.join();	
 	*/
-	std::string message = "IMU";
+	std::string message = "IMU\n";
+	mtx.lock();
 	if(ardsend(&message)){
 		std::cout<<"Success IMU"<<std::endl;
 	}else{
 	
 		std::cout<<"Fail IMU"<<std::endl;
 	}
-
+	mtx.unlock();
 	/*Debugging Lines
 		
 	std::cout<<"Received at "<<timestamp<<std::endl;
@@ -188,14 +189,15 @@ bool GPS(CMOOSMsg & M, void * pParam){
 	std::string filename = "/home/pi/moos-ivp/mymoos/Logs/";
 	std::thread thread = std::thread(logGPSFunc,filename,&received,timestamp);
 	thread.join();*/	
-	std::string message = "GPS";
+	std::string message = "GPS\n";
+	mtx.lock();
 	if(ardsend(&message)){
 		std::cout<<"Success GPS"<<std::endl;
 	}else{
 	
 		std::cout<<"Fail GPS"<<std::endl;
 	}
-	
+	mtx.unlock();
 	return true;
 }
 

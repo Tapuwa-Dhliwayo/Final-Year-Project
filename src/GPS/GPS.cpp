@@ -17,7 +17,7 @@ float* gps(){
 
 	
 	// wait for 2 seconds to receive data */
-	if (gps_waiting (&gps_data, 2000000)) {
+	if (gps_waiting (&gps_data, 10000)) {
 		//Read data
 		if ((c = gps_read(&gps_data)) == -1) {
 			printf("error occured reading gps data. code: %d, reason: %s\n", c, gps_errstr(c));
