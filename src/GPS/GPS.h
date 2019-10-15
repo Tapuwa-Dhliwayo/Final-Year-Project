@@ -7,3 +7,4 @@
 #include <gps.h>
 
 float* gps();
+void gpsFix();
