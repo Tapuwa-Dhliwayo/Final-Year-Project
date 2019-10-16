@@ -52,6 +52,44 @@ PostApplication/CMakeFiles/PostApp.dir/PostApp.cpp.o
 PostApplication/CMakeFiles/PostApp.dir/__/GPS/GPS.cpp.o
  /home/pi/moos-ivp/mymoos/src/GPS/GPS.cpp
  /home/pi/moos-ivp/mymoos/src/GPS/GPS.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/ActiveMailQueue.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/ClientCommsStatus.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/CommsTypes.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/EndToEndAudit.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSAsyncCommClient.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSCommClient.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSCommClient.hxx
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSCommObject.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSCommPkt.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MOOSMsg.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MessageFunction.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Comms/MulticastNode.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Bugcheck.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Config.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Event.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Event_POSIX.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Event_WIN32.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Exception.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Foundation.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Mutex.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Mutex_POSIX.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Mutex_WIN32.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Platform.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Platform_POSIX.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Platform_VMS.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Platform_WIN32.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/ScopedLock.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/Types.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Thirdparty/PocoBits/UnWindows.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/IPV4Address.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/MOOSLock.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/MOOSScopedLock.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/MOOSScopedPtr.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/MOOSThread.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/MOOSUtilityFunctions.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/Macros.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/ProcInfo.h
+ /usr/local/lib/cmake/MOOS/../../../include/MOOS/libMOOS/Utils/SafeList.h
 PostApplication/CMakeFiles/PostApp.dir/__/IMU/IMUSensor.cpp.o
  /home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.cpp
  /home/pi/moos-ivp/mymoos/src/IMU/IMUSensor.h

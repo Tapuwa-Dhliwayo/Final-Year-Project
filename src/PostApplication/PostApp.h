@@ -32,12 +32,6 @@ struct IMU_data{
 	int16_t gyroR_y;
 	int16_t gyroR_z;
 };
-struct GPS_data{
-
-	float lat;
-	float lon;
-
-};
 
 
 //Function Declarations

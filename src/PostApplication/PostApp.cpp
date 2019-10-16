@@ -126,31 +126,10 @@ void sampleGPS(std::vector<std::string>* db_names,int freq,int port){
 
 	int time = ((float)1/freq)*1000;
 	std::cout<<"Time GPS: "<<time<<std::endl;	
-	//Configure Comms
-	MOOS::MOOSAsyncCommClient Comms;
-
-	//start the comms running
-	Comms.Run(db_names->at(0),port,db_names->at(1)+"-GPS");
+	std::thread thread = std::thread(gpsFix,db_names,port);
+	thread.detach();
+	for(;;){}
 	
-	GPS_data extracted;
-	for(;;){
-		float* gpsdata = gps();
-	
-		if(!gpsdata[0]){
-		
-			//Do nothing	
-		}else{
-		
-			extracted.lat = gpsdata[0];
-			extracted.lon = gpsdata[1];
-			char data[sizeof(extracted)];
-			memcpy(data, &extracted, sizeof(extracted));
-			//Transmit data as a Binary Lump
-			Comms.Notify("GPS",&data,sizeof(data));
-
-		}
-		MOOSPause(time);
-	}
 }
 
 void simGPS(std::vector<std::string>* db_names,int freq,int port){

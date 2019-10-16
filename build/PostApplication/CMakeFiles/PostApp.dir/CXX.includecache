@@ -11,9 +11,13 @@ GPS.h
 /home/pi/moos-ivp/mymoos/src/GPS/GPS.h
 
 /home/pi/moos-ivp/mymoos/src/GPS/GPS.h
+MOOS/libMOOS/Comms/MOOSAsyncCommClient.h
+/home/pi/moos-ivp/mymoos/src/GPS/MOOS/libMOOS/Comms/MOOSAsyncCommClient.h
 stdio.h
 -
 unistd.h
+-
+cstring
 -
 stdlib.h
 -
