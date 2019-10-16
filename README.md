@@ -58,17 +58,17 @@ int ard(std::string* data); - this functions sends a string called data to Ardui
 
 FunctionTesting Directory
 
-ArdTest.cpp //
+ArdTest.cpp //This is the test function that sends strings to the Arduino and waits for a reply
 
-GPSTest.cpp //
+GPSTest.cpp //This tests the GPS network to see if the data received by gpsd process is being read
 
-IMUTest.cpp //
+IMUTest.cpp //This tests the IMU device at various sensitivities and checks the mathematically correctness of the vectors it reads
 
-MOOSTests.cpp //
+MOOSTests.cpp //The test opens a receiving and posting network through the MOOSDB server and sends data to the receiver end which prints out the sent data from two different notification heads(IMU and GPS)
 
-funcTests.cpp //
+funcTests.cpp //This tests the clogger,compress and decoder functions by running through all three stages and repeating the tests to see if it matches a control file
 
-unitTest.cpp //
+unitTest.cpp //This unitTests the huffman compression support functions
 
 GPS Directory
 
@@ -76,7 +76,7 @@ The GPS.h library used to communicate with the GPS (Unsuccessfully implemented f
 
 The function  gps() //Failed implementation
 
-the function gpsfix() //Correct gps implemenetation that runs a separate process continously sampling the gpsd process for data through a local network 
+the function gpsFix() //Correct gps implemenetation that runs a separate process continously sampling the gpsd process for data through a local network 
 
 IMU Directory
 
@@ -100,22 +100,22 @@ PostApplication Directory
 
 PostApp.h
 
-sampleIMU() //
+sampleIMU() //samples the IMU data and posts it
 
-sampleGPS() //
+sampleGPS() //sampls the GPS data and and posts it
 
-simGPS() //
+simGPS() //simulates the GPS posting behaviour
 
 ReceiveApplication Directory
 
-RecApp.h //
+RecApp.h 
 
-IMU() //
+IMU() //Receives the IMU data(interrupt callback routine)
 
-logIMUFunc() //
+logIMUFunc() //This function logs the Accel and Gyro data and compresses it into the Log/IMU/Acell and Log/IMU/Gyro directories
 
-GPS() //
+GPS() //Receives the GPS data(interrupt callback routine)
 
-logGPSFunc() //
+logGPSFunc() //This function logs the GPS data and compresses it into the Log/GPS directory
 
-checkStorage() //
+checkStorage() //This checks the Log directory to find out if the disk space has gone below 4Mb of space
